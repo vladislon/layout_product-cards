@@ -1,80 +1,87 @@
+@import '../utils/variables';
+
 .card {
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-  width: 200px;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  width: $card-width;
   box-sizing: border-box;
-  padding: 32px 16px 16px;
+  padding: $card-padding;
+  background-color: $color-primary-hover;
 
   &__image {
-    width: 160px;
-    height: 134px;
+    width: $card-image-width;
+    height: $card-image-height;
     display: block;
     margin: 0 auto 40px;
   }
 
   &__title {
-    font-family: Roboto, sans-serif;
-    font-size: 12px;
+    font-family: $font-main;
+    font-size: $font-size-title;
     font-weight: 500;
-    line-height: 18px;
-    color: #060b35;
+    line-height: $line-height-title;
+    color: $color-text-dark;
     margin-bottom: 4px;
   }
 
   &__product {
-    font-size: 10px;
+    font-size: $font-size-product;
     font-weight: 400;
-    line-height: 14px;
-    color: #616070;
+    line-height: $line-height-product;
+    color: $color-text-grey;
     margin-bottom: 16px;
   }
 
   &__price {
     display: flex;
-    font-size: 12px;
+    font-size: $font-size-price;
     font-weight: 400;
-    line-height: 18px;
-    color: #616070;
+    line-height: $line-height-price;
+    color: $color-text-grey;
     margin-bottom: 16px;
     justify-content: space-between;
     align-items: center;
 
     &-value {
-      font-size: 16px;
+      font-size: $font-size-price-value;
       font-weight: 700;
-      color: #060b35;
+      color: $color-text-dark;
     }
   }
 
-  &__button {
-    background-color: #00acdc;
-    color: #fff;
-    cursor: pointer;
-    width: 166px;
-    height: 40px;
-    font-size: 14px;
+  &__buy {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: $color-primary;
+    color: $color-button-text;
+    width: $button-width;
+    height: $button-height;
+    font-size: $font-size-button;
     font-weight: 700;
-    text-align: center;
-    line-height: 16px;
-    border-radius: 5px;
-    border: 1px solid #00acdc;
+    line-height: $line-height-button;
+    border-radius: $border-radius;
+    border: 1px solid $color-primary;
+    cursor: pointer;
     font-family: inherit;
+    text-align: center;
 
     &:hover {
-      background-color: #fff;
-      color: #00acdc;
-      border: 1px solid #00acdc;
+      background-color: $color-primary-hover;
+      color: $color-primary;
+      border: 1px solid $color-primary;
     }
   }
 
   &__reviews {
     display: flex;
     align-items: center;
-    font-size: 10px;
+    font-size: $font-size-reviews;
     font-weight: 400;
-    line-height: 14px;
+    line-height: $line-height-reviews;
     justify-content: space-between;
-    color: #060b35;
+    color: $color-text-dark;
     margin-bottom: 24px;
   }
 }
